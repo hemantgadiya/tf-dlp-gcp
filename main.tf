@@ -31,11 +31,11 @@ module "bigquery_input" {
   unique_label_id                     = var.unique_label
 }
 
-// 2c. Datastore table indexes (DLP source input #3)
-module "datastore_input" {
-  source                              = "./modules/dlp_input_sources/datastore"
-  datastore_kind                      = var.datastore_input_kind
-}
+#// 2c. Datastore table indexes (DLP source input #3)
+#module "datastore_input" {
+#  source                              = "./modules/dlp_input_sources/datastore"
+#  datastore_kind                      = var.datastore_input_kind
+#}
 
 // 3. DLP output config
 module "bigquery_output" {
