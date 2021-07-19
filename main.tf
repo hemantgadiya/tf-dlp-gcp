@@ -53,7 +53,7 @@ module "dlp" {
   dlp_job_trigger_schedule            = var.dlp_job_trigger_schedule
   bq_output_dataset_id                = module.bigquery_output.bq_dataset_id
   bq_input_dataset_id                 = module.bigquery_input.bq_dataset_id
-  bq_input_table_id                   = module.bigquery_input.bg_table_id
+  bq_input_table_id                   = module.bigquery_input.bq_table_id
   cloudstorage_input_storage_url      = module.storage_input.cloudstorage_bucket
   datastore_input_kind                = var.datastore_input_kind
 }
