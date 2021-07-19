@@ -1,1 +1,1 @@
-# tf-dlp-gcp
+# GCP DLP provisioning with Terraform
