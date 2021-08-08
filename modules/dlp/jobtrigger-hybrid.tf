@@ -4,6 +4,12 @@ resource "google_data_loss_prevention_job_trigger" "basic-hybrid-job" {
     description     = "Reoccuring search on hybrid datasource"
     display_name    = "Sample Hybrid Job"
 
+    triggers {
+        schedule {
+            recurrence_period_duration = var.dlp_job_trigger_schedule
+        }
+    }
+    
     inspect_job {
         inspect_template_name = google_data_loss_prevention_inspect_template.basic.id
         actions {
